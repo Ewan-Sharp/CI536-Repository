@@ -1,0 +1,102 @@
+Collect Top 10 Scores of an individual game 
+
+
+
+
+
+Show a specific user’s top scores
+Login Username and password comparison 
+Insert for the signing up with a new username and password
+Ensure the password is of a sensible strength 
+Ensure the username is unique
+DOB has to be compared to the current date to ensure the user is 18 years old or above
+
+Drop 
+
+DROP TABLE tUsers;
+
+
+
+Create tables
+
+CREATE TABLE tUsers(
+	userID INT NOT NULL AUTO_INCREMENT,
+	username varchar(40) NOT NULL UNIQUE,
+	uPassword varchar(80) NOT NULL,
+	dob VARCHAR(10) NOT NULL,  
+    PRIMARY KEY (userID)
+);
+
+
+
+
+CREATE TABLE tGame(
+	gameID varchar(3) PRIMARY KEY,
+	gameName varchar(100) NOT NULL
+);
+
+CREATE TABLE tScores(
+scoreID INT(8) PRIMARY KEY, 
+score INT(8) NOT NULL,  
+gameID VARCHAR(3) NOT NULL,
+scoreDate date NOT NULL,
+FOREIGN KEY (gameID) REFERENCES tGame(gameID)
+ );
+
+CREATE TABLE tUserScore(
+userID VARCHAR(8), 
+scoreID INT(8),
+PRIMARY KEY (userID, scoreID),
+FOREIGN KEY (userID) REFERENCES tUsers(userID),
+FOREIGN KEY (scoreID) REFERENCES tScore(scoreID)
+ );
+
+
+Populating Tables with test data 
+
+INSERT INTO tUsers (username, uPassword, dob) VALUES
+('onoAdmin', 'onoAdmin*',  '01-01-2000');
+
+
+
+INSERT INTO tGame(gameID, gameName) VALUES
+('BL1', 'Blackjack');
+
+
+
+INSERT INTO tGame(gameID, gameName) VALUES
+('UN1', 'UNO');
+
+
+
+INSERT INTO tScores (scoreID, score, gameID, scoreDate) VALUES
+(12345678,180, 'BL1',  '2022-01-14');
+
+INSERT INTO tUserScore(userID, scoreID) VALUES
+('MAR54321', 12345678);
+
+Queries/functions/procedures
+
+Collect Top 10 Scores of the active user for an individual game 
+
+SELECT tScores.score
+FROM tScores
+INNER JOIN tUserScore ON tScores.scoreID = tUserScore.scoreID
+WHERE userID= 'MAR54321'
+ORDER BY score ASC
+LIMIT 10;
+
+
+
+
+Collect Top 10 Scores of a game
+
+SELECT tScores.score
+FROM tScores
+INNER JOIN tGame ON tScores.gameID = tGame.gameID
+WHERE tGame.gameID= 'BL1'
+ORDER BY score ASC
+LIMIT 10;
+
+
+

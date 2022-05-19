@@ -1,0 +1,116 @@
+Project Brief
+
+
+
+
+Contents
+
+Initial Ideas
+Established Project 
+Target Audience
+Roles and duties
+Overall targets and goals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Initial Ideas
+
+The initial project idea was to create an application that guides and teaches users how to play card games responsibly. On this application, users would be able to play the different card games while following the tutorials of how to play the game and eventually test to see if they have understood the instructions by plying in front of a computer. Potential game ideas will include Blackjack, Uno, and poker. This application would have a login system and record users’ scores for the different games, which are stored in a database. 
+
+Established Project 
+We are going to create an application that teaches our audience how to play blackjack and Uno using tutorials. If we have time we will also teach them how to play poker. The games we have decided on will be able to be played by the user on our applications. We are also going to create an algorithm that will score points for the games so that users can look back on their high scores, which will be stored in a database. There is going to be a login system using a username and password, the details for the user to login with will also be stored in the database. 
+
+Target Audience
+
+Our target audience is 18 years or older. This is as some of the games we are teaching are gambling games. Ethically we felt it is not appropriate to teach children (any person under the age of 18 years old) how to gamble. This is because we don’t want to promote games, which can lead to risk-taking behaviour, to young minds which can be easily influenced. 
+
+Roles and duties
+
+In our team we have established tasks that we need to complete. For each task we have assigned a primary and secondary developer. This is so that not only one person is working on each task and allows everyone to receive support if they run into any issues with their task(s). 
+
+
+
+Main tasks and their developers:
+Main application
+Primary Developer: Ewan
+Secondary Developer: Sean
+Coding Uno
+Primary Developer: Thomas
+Secondary Developer: Ewan
+Coding Blackjack
+Primary Developer: Sean
+Secondary Developer: Shash
+Database (for the login system)
+Primary Developer: Abigail
+Secondary Developer: Tehila
+Design
+Primary Developer: Tehila
+Secondary Developer: Abigail
+Testing	
+Ewan
+Sean
+Shash
+Thomas
+Tehila
+Abigail
+Report	
+Ewan
+Sean
+Shash
+Thomas
+Tehila
+Abigail
+
+
+Overall goals
+
+We want to create this application as we feel that it is a fun way to learn how to play card games. We also felt from a developer’s perspective that it allows us to expand our knowledge and skills. As we begin to link together the front-end application, code, and database together to create a fully working product. 
+
+Key goals:
+Produce an easy to navigate application
+Produce functional games
+Create a login system so that the user’s scores can be saved and associated with the user who obtained that score
+Teach users how to play card games
+Develop our own skills;
+Teamwork
+Coding
+Building front-end application
+Building back-end application
+Connecting the front-end and back-end
+
